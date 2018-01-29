@@ -1,0 +1,36 @@
+Report:
+Naive will always take the longest and do the most amount of comparisons because it checks every single character.
+Then there is tradeoffs between Boyer-Moore and KMP. KMP will have less comparisons and be fast when we compare with a small pattern and a large text, preferably with repeats.
+As well KMP only will examine each char only once. Where Boyer-Moore is fast when we have a large pattern and slow when pattern is small.
+From my results of testing, I made the pattern small and a large text and I got KMP having fewer comparisons than Boyer-Moore.
+Then I made a test with large pattern and large text in which Boyer-Moore had significantly fewer comparisons than KMP.
+Test Results:
+Favorable BM Test
+KMP : 20
+BM : 4
+KMP : 21
+BM : 4
+KMP : 21
+BM : 4
+KMP : 22
+BM : 3
+KMP : 21
+BM : 5
+KMP : 23
+BM : 3
+Favorable KMP Test
+KMP : 12
+BM : 19
+KMP : 14
+BM : 25
+Real Twitter Data:
+@1future
+Over 1000 tweets
+naive comps = 125, KMP comps = 167 BM comps = 62
+0. RT @MNMbe: De song Mask Off van Future is een échte hype op internet, net zoals de #maskoffchallenge!
+Samson & Gert en Alberto zijn al hel…
+Mask Off appears at index 19
+2. Mask off #GOLD thanks to my riders..we not done yet
+Mask Off appears at index 0
+4. RT @YoungLimitEU: @1future Zoom, Mask Off, Draco, Poppin Tags, and I'm so Groovy???
+Mask Off appears at index 33
